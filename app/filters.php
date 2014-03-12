@@ -10,7 +10,7 @@
 | application. Here you may also register your custom route filters.
 |
 */
-
+//test from VAU
 
 App::before(function($request)
 {

@@ -12,4 +12,3 @@ Line9Vad
 Line6
 Line8Bala
 Line9Bala
-Line10Balad

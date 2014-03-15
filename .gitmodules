@@ -1,0 +1,6 @@
+[submodule "platform"]
+	path = platform
+	url = git://github.com/greatb/VibesPlatformPHP.git
+[submodule "package"]
+	path = package
+	url = git://github.com/VibesAU/Package.git

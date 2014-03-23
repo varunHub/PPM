@@ -20,8 +20,11 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{$app_cdn}}/js/bootstrap.min.js"></script>
-    <script src="{{$app_cdn}}/js/angular.min.js"></script>
+
+    <script src="{{ $app_cdn; }}/js/jquery.min.js"></script>
+    <script src="{{ $app_cdn; }}/js/external.min.js"></script>
+    <script src="{{ $app_cdn; }}/js/bootstrap.min.js"></script>
+    <script src="{{ $app_cdn; }}/js/admin.min.js"></script>
 
 
 

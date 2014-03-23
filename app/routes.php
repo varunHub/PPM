@@ -13,7 +13,7 @@
 
 Route::get('/test', function()
 {
-	return View::make('test');
+	return View::make('hello');
 });
 
 $dir = "module\SysSetting\Controller";

@@ -11,6 +11,11 @@ some git cmds
 C:\wamp\www\PPM [master]> git remote add --track master VibesAU http://github.co
 m/VibesAU/PPM.git
 git remote -v
+Test 2
+
+Bala1
+Bala2
+git remote -v
 git pull VibesAU master
 
 Bala1

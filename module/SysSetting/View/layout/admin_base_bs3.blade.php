@@ -15,19 +15,13 @@
     <meta name="robots" content="index, follow" />
 
     <!-- Le styles -->
-    <link href="{{$app_cdn}}/css/bootstrap.3.css" rel="stylesheet">
-    <link href="{{$app_cdn}}/css/vux-base.css" rel="stylesheet">
+    <link href="{{$app_cdn}}/css/custom.css" rel="stylesheet">
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{$app_cdn}}/js/jquery-2.0.3.min.js"></script>
-    
-    
-    <script src="{{$app_cdn}}/js/bootstrap.3.min.js"></script>
+    <script src="{{$app_cdn}}/js/bootstrap.min.js"></script>
     <script src="{{$app_cdn}}/js/angular.min.js"></script>
-    <script src="{{$app_cdn}}/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="{{$app_cdn}}/js/app.js" type="text/javascript"></script>
 
 
 
@@ -36,8 +30,8 @@
 
 
 
-    <link href="{{$app_cdn}}/css/font-awesome.css" rel="stylesheet">
-    <!--[if IE 7]><link href="{{ $app_cdn; }}/css/font-awesome-ie7.css" rel="stylesheet"><![endif]-->
+
+    <!--[if IE 7]><link href="{{ $app_cdn; }}/css/custom-ie7.css" rel="stylesheet"><![endif]-->
 
     <style>
     body {

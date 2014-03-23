@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/test', function()
 {
-	return View::make('hello');
+	return View::make('test');
 });
+
+$dir = "module\SysSetting\Controller";
+//Setting Table
+Route::get("Admin/setting/search", 	array("uses" => "$dir\sysSettingCont@pst_search"));
+Route::get("Admin/setting/test", 	array("uses" => "$dir\sysSettingCont@test"));
+Route::resource("Admin/setting", "$dir\sysSettingCont");
+Route::post("Admin/setting/{id}", 	array("uses" => "$dir\sysSettingCont@pst_save"));
+Route::post("Admin/setting/{id}/edit", 	array("uses" => "$dir\sysSettingCont@get_edit"));
+Route::post("Admin/setting/{id}/chgLock", 	array("uses" => "$dir\sysSettingCont@pst_lock"));
+Route::post("Admin/setting/{id}/remove", 	array("uses" => "$dir\sysSettingCont@pst_remove"));
+Route::post("Admin/setting/{id}/Editdata", 	array("uses" => "$dir\sysSettingCont@pst_Editdata"));

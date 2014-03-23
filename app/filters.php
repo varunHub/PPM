@@ -21,9 +21,11 @@ App::before(function($request)
 	View::share('app_url_admin', 	Config::get('app.app_url_admin') );
 	View::share('app_title', 		Config::get('app.app_title') );
 	View::share('app_title_user', 	Config::get('app.app_title_user') );		
-	View::share('app_title_admin', 	Config::get('app.app_title_admin') );
+	View::share('app_admin_title', 	Config::get('app.app_title_admin') );
 	View::share('app_upload_put',	Config::get('app.app_upload_put') );
 	View::share('app_upload_get',	Config::get('app.app_upload_get') );
+	View::share('app_cdn',	Config::get('app.app_cdn') );
+
 });
 
 App::before(function($request)

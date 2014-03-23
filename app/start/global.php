@@ -83,3 +83,5 @@ require app_path().'/filters.php';
 
 include app_path().'/../platform/Core/Control/macro.php';
 
+View::addLocation(app_path().'/../module');
+View::addNamespace('theme', app_path().'/../module');

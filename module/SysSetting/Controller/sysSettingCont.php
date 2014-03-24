@@ -35,6 +35,7 @@ class sysSettingCont extends Core\coreController
 		$_model 		= 	$this->model_name;
 		$use_model 		= 	new $_model;	
 		$validator 		=	$use_model->validateData($input);
+		$err 			=	'';
 
 		$use_model->make();
 		$use_model -> assignValues($input);
@@ -56,7 +57,17 @@ class sysSettingCont extends Core\coreController
 		
 		if($input['id'] == $use_model->def_id)
 		{
-			$status			=	$use_model -> save();
+			try 
+			{
+   				$status		=	$use_model -> save();
+			}
+			catch(\Exception $e)
+			{
+    			$status 	=	'fail'; 
+    			$err 		=$e->getMessage();
+			}
+
+			
 		}else
 		{
 			$use_model 		= 	new $_model;
@@ -73,7 +84,7 @@ class sysSettingCont extends Core\coreController
 		return View::make($this->view_form)
 			-> with('resData',  $use_model)
 			-> with('status',  $status)
-			-> with('error',  '')
+			-> with('error',  $err)
 			;
 	}
 	public function get_single($id){
@@ -81,6 +92,7 @@ class sysSettingCont extends Core\coreController
 		$_model 	= $this->model_name;
 		$use_model	= new $_model;
 		$use_model 	= $_model::find($id);
+		$err 			=	'';
 		
 		if (is_null($use_model))
 		{
@@ -89,7 +101,7 @@ class sysSettingCont extends Core\coreController
 				return View::make($this->view_form)
 				-> with('resData',  $use_model)
 				-> with('status',  '')
-				-> with('error',  '')			
+				-> with('error',  $err)			
 				;
 		}
 
@@ -98,6 +110,22 @@ class sysSettingCont extends Core\coreController
 			-> with('resData',  $use_model)
 			;
 	}
+
+	public function get_new(){
+			$_model 	= $this->model_name;
+			$use_model = new $_model;
+			$use_model->make();
+
+			return View::make($this->view_form)
+				-> with('resData',  $use_model)
+				-> with('status',  '')
+				-> with('error',  '')			
+				;
+
+	}
+
+
+	
 
 	public function pst_lock($id)
 	{

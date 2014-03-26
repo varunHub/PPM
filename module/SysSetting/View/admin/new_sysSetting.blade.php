@@ -1,7 +1,7 @@
 @extends('SysSetting.View.layout.admin_base_bs3')
 
 @section('nav_bar')
-    <li class="active"><a href="{{$app_url}}/Admin/setting/new">New</a></li>
+    <li class="active"><a href="{{$app_url}}/Admin/setting/create">Create</a></li>
     <li ><a href="{{$app_url}}/Admin/setting">ListView</a></li>
 @stop
 

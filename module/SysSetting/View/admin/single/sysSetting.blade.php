@@ -2,7 +2,7 @@
 
 
 @section('nav_bar')
-    <li ><a href="{{$app_url}}/Admin/setting/new">New</a></li>
+    <li ><a href="{{$app_url}}/Admin/setting/create">Create</a></li>
     <li ><a href="{{$app_url}}/Admin/setting">ListView</a></li>
     <li class="active"><a href="#">SingleView</a></li>
 @stop

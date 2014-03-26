@@ -19,7 +19,7 @@ Route::get('/test', function()
 $dir = "module\SysSetting\Controller";
 //Setting Table
 Route::get("Admin/setting/search", 	array("uses" => "$dir\sysSettingCont@pst_search"));
-Route::get("Admin/setting/new", 	array("uses" => "$dir\sysSettingCont@get_new"));
+Route::get("Admin/setting/create", 	array("uses" => "$dir\sysSettingCont@get_create"));
 Route::resource("Admin/setting", "$dir\sysSettingCont");
 Route::post("Admin/setting/{id}", 	array("uses" => "$dir\sysSettingCont@pst_save"));
 Route::post("Admin/setting/{id}/edit", 	array("uses" => "$dir\sysSettingCont@get_edit"));

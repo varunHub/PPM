@@ -111,7 +111,7 @@ class sysSettingCont extends Core\coreController
 			;
 	}
 
-	public function get_new(){
+	public function get_create(){
 			$_model 	= $this->model_name;
 			$use_model = new $_model;
 			$use_model->make();

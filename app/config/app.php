@@ -26,19 +26,19 @@ return array(
 	|
 	*/
 
-	'app_url' 			=> 'http://localhost/Project/public',
-	'app_url_cdn' 		=> 'http://localhost/Project/public',
-	'app_url_api'		=> 'http://localhost/Project/public/api',
-	'app_url_user'		=> 'http://localhost/Project/public/user',
-	'app_url_admin'		=> 'http://localhost/Project/public/admin',
+	'app_url' 			=> 'http://localhost/PPM/public',
+	'app_url_cdn' 		=> 'http://localhost/PPM/public',
+	'app_url_api'		=> 'http://localhost/PPM/public/api',
+	'app_url_user'		=> 'http://localhost/PPM/public/user',
+	'app_url_admin'		=> 'http://localhost/PPM/public/admin',
 
-	'app_upload_put' 	=> '/e/Project/public/uploads/',
-	'app_upload_get' 	=> 'http://localhost/Project/public/uploads/',
+	'app_upload_put' 	=> '/e/PPM/public/uploads/',
+	'app_upload_get' 	=> 'http://localhost/PPM/public/uploads/',
 
-	
-	'app_title' 		=> 'Project',
-	'app_title_admin' 	=> 'Project Admin',
-	'app_title_user' 	=> 'Project User',
+	'app_cdn' 			=> 'http://localhost/PPM/public',
+	'app_title' 		=> 'PPM',
+	'app_title_admin' 	=> 'PPM Admin',
+	'app_title_user' 	=> 'PPM User',
 
 
 	/*

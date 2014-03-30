@@ -1,0 +1,7 @@
+$ composer dump-autoload
+
+git remote add --track master VibesAU http://github.com/VibesAU/PPM.git
+git remote -v
+git pull VibesAU master
+git submodule foreach git pull origin v2.0.0
+git submodule foreach git pull origin v2.0.0

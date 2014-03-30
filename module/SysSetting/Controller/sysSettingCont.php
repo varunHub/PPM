@@ -29,6 +29,7 @@ class sysSettingCont extends Core\coreController
 			-> with($this->json_model_key, $use_model)
 			;
 	}
+
 	public function pst_save($id)
 	{
 		$input 			= 	Input::all();
@@ -38,14 +39,13 @@ class sysSettingCont extends Core\coreController
 		$err 			=	'';
 
 		$use_model->make();
-		$use_model -> assignValues($input);
+		$use_model -> assignTo($input);
 
 		if($validator->fails())
 		{
 			$messages = $validator->messages();
 			$errors 	=implode("<br>", $messages->all());
 				
-			
 			return View::make($this->view_form)
 				-> with('resData',  $use_model)
 				-> with('status',  'fail')
@@ -53,7 +53,6 @@ class sysSettingCont extends Core\coreController
 				;
 
 		}
-
 		
 		if($input['id'] == $use_model->def_id)
 		{
@@ -66,13 +65,12 @@ class sysSettingCont extends Core\coreController
     			$status 	=	'fail'; 
     			$err 		=$e->getMessage();
 			}
-
-			
-		}else
+		}
+		else
 		{
 			$use_model 		= 	new $_model;
 			$use_model 		= $use_model::find($input['id']);
-			$use_model->assignValues($input);
+			$use_model->assignTo($input);
 			$status 		= $use_model->save();
 		}
 		
@@ -87,7 +85,10 @@ class sysSettingCont extends Core\coreController
 			-> with('error',  $err)
 			;
 	}
-	public function get_single($id){
+
+
+	public function get_single($id)
+	{
 
 		$_model 	= $this->model_name;
 		$use_model	= new $_model;
@@ -105,23 +106,22 @@ class sysSettingCont extends Core\coreController
 				;
 		}
 
-
 		return View::make($this->view_single)
 			-> with('resData',  $use_model)
 			;
 	}
 
-	public function get_create(){
-			$_model 	= $this->model_name;
-			$use_model = new $_model;
-			$use_model->make();
+	public function get_create()
+	{
+		$_model 	= $this->model_name;
+		$use_model = new $_model;
+		$use_model->make();
 
-			return View::make($this->view_form)
-				-> with('resData',  $use_model)
-				-> with('status',  '')
-				-> with('error',  '')			
-				;
-
+		return View::make($this->view_form)
+			-> with('resData',  $use_model)
+			-> with('status',  '')
+			-> with('error',  '')			
+			;
 	}
 
 
@@ -134,7 +134,7 @@ class sysSettingCont extends Core\coreController
 		$sys_Setting 			= $use_model::find($id);
 		$sys_Setting->locked 	= ($sys_Setting->locked + 1) % 2;
 		$status 				= $sys_Setting->save();
-		return Redirect::to('Admin/setting/'.$id);
+		return Redirect::to('{{$app_url_admin}}/setting/' . $id);
 	}
 
 	public function pst_remove($id)
@@ -144,7 +144,7 @@ class sysSettingCont extends Core\coreController
 		$sys_Setting 	= $use_model::find($id);
 		$sys_Setting->active = ($sys_Setting->active + 1) % 2;
 		$status 		= $sys_Setting->save();
-		return Redirect::to('Admin/setting/'.$id);
+		return Redirect::to('{{$app_url_admin}}/setting/' . $id);
 	}
 
 	
@@ -185,9 +185,4 @@ class sysSettingCont extends Core\coreController
 			;
 
 	}
-
-	
-
-
-
 }

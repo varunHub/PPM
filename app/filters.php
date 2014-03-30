@@ -24,7 +24,7 @@ App::before(function($request)
 	View::share('app_admin_title', 	Config::get('app.app_title_admin') );
 	View::share('app_upload_put',	Config::get('app.app_upload_put') );
 	View::share('app_upload_get',	Config::get('app.app_upload_get') );
-	View::share('app_cdn',	Config::get('app.app_cdn') );
+	View::share('app_cdn',			Config::get('app.app_cdn') );
 
 });
 
